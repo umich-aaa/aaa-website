@@ -1,11 +1,12 @@
 import "./Admins.css";
 
-import takioProfileImg from "./takio-pfp.jpg"
 import rixProfileImg from "./rix-pfp.png"
-import fernProfileImg from "./fern-pfp.jpg"
-import lucaProfileImg from "./luca-pfp.jpg"
-import stekunsProfileImg from "./stekuns-pfp.jpg"
 import mesoonProfileImg from "./mesoon-pfp.jpg"
+import foxProfileImg from "./fox-pfp.jpg"
+import jowoProfileImg from "./jowo-pfp.jpg"
+import fletchelProfileImg from "./fletchel-pfp.png"
+import kikojamProfileImg from "./kikojam-pfp.png"
+import mosfetProfileImg from "./mosfet-pfp.png"
 import placeholderImg from "./placeholder.png"
 
 import emailIcon from "./email-icon.svg"
@@ -56,21 +57,14 @@ export default function AdminsView(): JSX.Element {
         <div id="admin" className="view-section-container">
             <div className="view-content-container">
                 <h2 className="view-content-title-small">Club Admins</h2>
-                <p className="view-content-subtitle">for the 2024-25 school year</p>
+                <p className="view-content-subtitle">for the 2025-26 school year</p>
 
                 <div className={isMobile ? "admins-view-content-mobile" : "admins-view-content-desktop"}>
-                    <AdminItem name="Stekuns" role="President" pfp={stekunsProfileImg}
-                        socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/dantegrt/"
-                        socialIcon2={tiktokIcon} socialName2="Tik Tok" socialLink2="https://www.tiktok.com/@luckiimutt?_t=8olx8NMlZrq&_r=1"/>
-                    <AdminItem name="Fern" role="Vice President" pfp={fernProfileImg}
-                        socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/peachypawsstudios?igsh=MXJmZTE4a2dyc3JtYw=="/>
-                    <AdminItem name="Takio" role="Secretary" pfp={takioProfileImg}/>
-                    <AdminItem name="Rix" role="Publicity Chair" pfp={rixProfileImg}
-                        socialIcon1={twitterIcon} socialName1="Twitter" socialLink1="https://x.com/biteyrix"
-                        socialIcon2={globeIcon} socialName2="Website" socialLink2="https://rix.dog"/>
-                    <AdminItem name="Luca" role="Social Chair" pfp={lucaProfileImg}
-                        socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/its_luca_pink/"
-                        socialIcon2={telegramIcon} socialName2="Telegram" socialLink2="http://t.me/its_luca_pink"/>
+                    <AdminItem name="Fox" role="President" pfp={foxProfileImg}/>
+                    <AdminItem name="JoWo" role="Vice President" pfp={jowoProfileImg}/>
+                    <AdminItem name="Fletchel" role="Communications Chair" pfp={fletchelProfileImg}/>
+                    <AdminItem name="KikoJam" role="Finance Chair" pfp={kikojamProfileImg}/>
+                    <AdminItem name="Mosfet" role="Recruitment Chair" pfp={mosfetProfileImg}/>
                 </div>
 
                 <ActionButton img={emailIcon} text="Send an email to admins" color="white" backgroundColor="#00274C" invertIconColor={true} smallerIcon={true} onClick={() => { openInNewTab("mailto:anthroartassociation@gmail.com") }} alt="Email Icon"/>
@@ -84,6 +78,7 @@ export default function AdminsView(): JSX.Element {
                         socialIcon1={twitterIcon} socialName1="Twitter" socialLink1="https://x.com/biteyrix"
                         socialIcon2={globeIcon} socialName2="Website" socialLink2="https://rix.dog"/>
                     <AdminItem name="Whiskey Wolf" role="2024-25" pfp={mesoonProfileImg}/>
+                    <AdminItem name="Mosfet" role="2025-26" pfp={mosfetProfileImg}/>
                 </div>
             </div>
         </div>
