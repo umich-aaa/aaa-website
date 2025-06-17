@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.61822385.css",
-    "main.js": "/static/js/main.47912667.js",
+    "main.css": "/static/css/main.5e97780b.css",
+    "main.js": "/static/js/main.d0e52ddf.js",
     "static/js/453.fb180af7.chunk.js": "/static/js/453.fb180af7.chunk.js",
     "static/media/SF-Pro.ttf": "/static/media/SF-Pro.2f9118d7e608bf94730c.ttf",
     "static/media/festifall2023.jpg": "/static/media/festifall2023.44b0c78d5f8ff3830e5c.jpg",
@@ -14,11 +14,13 @@
     "static/media/Courgette-Regular.ttf": "/static/media/Courgette-Regular.f99d9948a486f6270149.ttf",
     "static/media/kikojam-pfp.png": "/static/media/kikojam-pfp.9d6ead919de09a2beb8e.png",
     "static/media/mesoon-pfp.jpg": "/static/media/mesoon-pfp.4302be2f40547684a045.jpg",
+    "static/media/mosfet-pfp.png": "/static/media/mosfet-pfp.d1a56463342a4432b7d6.png",
     "static/media/jowo-pfp.jpg": "/static/media/jowo-pfp.a8512c21d2347a95b572.jpg",
     "static/media/fletchel-pfp.png": "/static/media/fletchel-pfp.023bd5eb4601c56a67ba.png",
     "static/media/fox-pfp.jpg": "/static/media/fox-pfp.f859d448eab981717eb5.jpg",
     "static/media/discord-icon.png": "/static/media/discord-icon.fcb1b31f7dec865b27fe.png",
     "static/media/instagram-icon.svg": "/static/media/instagram-icon.fb166e0ce6ad1835379d83e1cd6ec33a.svg",
+    "static/media/mastodon-icon.svg": "/static/media/mastodon-icon.3c4e4c48dfc87e1aaac3fef5f508b946.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -26,14 +28,15 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/twitter-icon.svg": "/static/media/twitter-icon.b0f43c82f42a9b4b65c5521858575100.svg",
     "static/media/globe-icon.svg": "/static/media/globe-icon.e04307867ed5661028395609aa39a90e.svg",
+    "static/media/bluesky-icon.svg": "/static/media/bluesky-icon.cfb01fd195c5e537273abc7b9f810607.svg",
     "static/media/calendar-icon.svg": "/static/media/calendar-icon.70c80112a5909a0d1d2ec85716001d4e.svg",
     "static/media/email-icon.svg": "/static/media/email-icon.a7bdedcb801df4a655921d60480d444c.svg",
-    "main.61822385.css.map": "/static/css/main.61822385.css.map",
-    "main.47912667.js.map": "/static/js/main.47912667.js.map",
+    "main.5e97780b.css.map": "/static/css/main.5e97780b.css.map",
+    "main.d0e52ddf.js.map": "/static/js/main.d0e52ddf.js.map",
     "453.fb180af7.chunk.js.map": "/static/js/453.fb180af7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61822385.css",
-    "static/js/main.47912667.js"
+    "static/css/main.5e97780b.css",
+    "static/js/main.d0e52ddf.js"
   ]
 }
