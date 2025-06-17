@@ -3,7 +3,7 @@ import { BrowserView, MobileView, isMobile } from "react-device-detect"
 import backgroundImg from "../common/ac2024.jpg"
 import discordIcon from "../common/discord-icon.png"
 import twitterIcon from "../common/twitter-icon.svg"
-import ActionButton from "../common/ActionButton"
+import URLButton from "../common/URLButton"
 
 export default function FurriesView(): JSX.Element {
     const openInNewTab = (url: string) => {
@@ -50,8 +50,8 @@ export default function FurriesView(): JSX.Element {
                         </ul>
                     </div>
                 </div>
-                <ActionButton img={discordIcon} text="Join our Discord server!" color="white" backgroundColor="#5865F2" invertIconColor={true} onClick={() => openInNewTab("https://discord.gg/Jj7tH5zxzg")} alt="Discord Icon"/>
-                <ActionButton img={twitterIcon} text="Follow our Twitter!" color="white" backgroundColor="#1DA1F2" invertIconColor={true} smallerIcon={true} onClick={() => openInNewTab("https://x.com/FurriesAtUMich")} alt="Twitter Icon"/>
+                <URLButton img={discordIcon} text="Join our Discord server!" color="white" backgroundColor="#5865F2" invertIconColor={true} url="https://discord.gg/Jj7tH5zxzg" alt="Discord Icon"/>
+                <URLButton img={twitterIcon} text="Follow our Twitter!" color="white" backgroundColor="#1DA1F2" invertIconColor={true} smallerIcon={true} url="https://x.com/FurriesAtUMich" alt="Twitter Icon"/>
             </div>
         </div>
     )

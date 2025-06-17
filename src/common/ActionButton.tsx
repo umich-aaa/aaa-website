@@ -1,6 +1,5 @@
 import "./ActionButton.css"
 
-
 export default function ActionButton(props: {
     img: any, text: string, color: string, backgroundColor: string, 
     invertIconColor?: boolean, smallerIcon?: boolean, alt: string,

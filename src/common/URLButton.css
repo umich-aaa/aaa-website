@@ -1,5 +1,10 @@
-.action-button {
+.url-button-container {
     width: 420px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.url-button {
     max-width: 100%;
     display: block;
     margin: auto;
@@ -10,10 +15,10 @@
     margin-bottom: 8px;
     text-align: center;
 }
-.action-button:hover {
+.url-button:hover {
     filter: brightness(0.8);
 }
-.action-button img {
+.url-button img {
     width: 32px;
     height: 32px;
     object-fit: cover;
@@ -21,12 +26,12 @@
     vertical-align: middle;
     margin-right: 16px;
 }
-.action-button .smaller-icon {
+.url-button .smaller-icon {
     width: 22px;
     height: 22px;
     margin-top: 5px; margin-bottom: 5px;
 }
-.action-button span {
+.url-button span {
     vertical-align: middle;
     font-size: 13pt;
     font-weight: 600;

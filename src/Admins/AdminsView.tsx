@@ -15,8 +15,10 @@ import globeIcon from "../common/globe-icon.svg"
 import tiktokIcon from "../common/tiktok-icon.png"
 import telegramIcon from "../common/telegram-icon.png"
 import instagramIcon from "../common/instagram-icon.svg"
+import blueskyIcon from "../common/bluesky-icon.svg"
+import mastodonIcon from "../common/mastodon-icon.svg"
 import { BrowserView, MobileView, isMobile } from "react-device-detect"
-import ActionButton from "../common/ActionButton"
+import URLButton from "../common/URLButton"
 import Spacer from "../common/Spacer"
 
 const openInNewTab = (url: string) => {
@@ -37,15 +39,15 @@ function AdminItem(props: {
             <p className="admin-role-text">{props.role}</p>
             {
                 (props.socialIcon1 && props.socialName1 && props.socialLink1) &&
-                <img src={props.socialIcon1} alt={props.socialName1} 
-                    onClick={() => {openInNewTab(props.socialLink1 ?? '')}}
-                    className="admin-social-icon"/>
+                <a href={props.socialLink1} target="_blank" rel="noreferrer">
+                    <img src={props.socialIcon1} alt={props.socialName1} className="admin-social-icon"/>
+                </a>
             }
             {
                 (props.socialIcon2 && props.socialName2 && props.socialLink2) &&
-                <img src={props.socialIcon2} alt={props.socialName2} 
-                    onClick={() => {openInNewTab(props.socialLink2 ?? '')}}
-                    className="admin-social-icon"/>
+                <a href={props.socialLink2} target="_blank" rel="noreferrer">
+                    <img src={props.socialIcon2} alt={props.socialName2} className="admin-social-icon"/>
+                </a>
             }
         </div>
     )
@@ -62,12 +64,19 @@ export default function AdminsView(): JSX.Element {
                 <div className={isMobile ? "admins-view-content-mobile" : "admins-view-content-desktop"}>
                     <AdminItem name="Fox" role="President" pfp={foxProfileImg}/>
                     <AdminItem name="JoWo" role="Vice President" pfp={jowoProfileImg}/>
-                    <AdminItem name="Fletchel" role="Communications Chair" pfp={fletchelProfileImg}/>
-                    <AdminItem name="KikoJam" role="Finance Chair" pfp={kikojamProfileImg}/>
-                    <AdminItem name="Mosfet" role="Recruitment Chair" pfp={mosfetProfileImg}/>
+                    <AdminItem name="Fletchel" role="Communications Chair" pfp={fletchelProfileImg}
+                        socialIcon1={blueskyIcon} socialName1="Bluesky" socialLink1="https://bsky.app/profile/fletchel.bsky.social"/>
+                    <AdminItem name="KikoJam" role="Finance Chair" pfp={kikojamProfileImg}
+                        socialIcon1={blueskyIcon} socialName1="Bluesky" socialLink1="https://bsky.app/profile/kikojam.bsky.social"/>
+                    <AdminItem name="Mosfet" role="Recruitment Chair" pfp={mosfetProfileImg}
+                        socialIcon1={mastodonIcon} socialName1="Mastodon" socialLink1="https://furry.engineer/@mosfet"/>
                 </div>
 
-                <ActionButton img={emailIcon} text="Send an email to admins" color="white" backgroundColor="#00274C" invertIconColor={true} smallerIcon={true} onClick={() => { openInNewTab("mailto:anthroartassociation@gmail.com") }} alt="Email Icon"/>
+                <URLButton img={emailIcon} text="Send an email to admins" color="white" backgroundColor="#00274C" invertIconColor={true} smallerIcon={true}
+                    url="mailto:anthroartassociation@gmail.com" alt="Email Icon"/>
+                <div style={{ textAlign: "center" }}>
+                    <span>Button not working? Try <a href="mailto:anthroartassociation@gmail.com">anthroartassociation@gmail.com</a></span>
+                </div>
             </div>
             <Spacer height={12} />
             <div className="view-content-container" style={{ marginBottom: "-16px"}}>
