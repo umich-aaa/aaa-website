@@ -16,11 +16,12 @@ function NextArrow(props){
     const { style, onClick } = props
     return(
         <div
-              className="slick-arrow-next"
-      style={{ ...style, display: "flex" }}
-      onClick={onClick}>
-        <img className="slick-arrow-icon" src={rightArrow}/>
-      </div>
+            className="slick-arrow-next"
+            style={{ ...style, display: "flex" }}
+            onClick={onClick}
+        >
+            <img className="slick-arrow-icon" src={rightArrow}/>
+        </div>
     );
 }
 
@@ -28,11 +29,12 @@ function PrevArrow(props){
     const { style, onClick } = props
     return(
         <div
-              className="slick-arrow-prev"
-      style={{ ...style, display: "flex" }}
-      onClick={onClick}>
-        <img className="slick-arrow-icon" src={leftArrow}/>
-      </div>
+            className="slick-arrow-prev"
+            style={{ ...style, display: "flex" }}
+            onClick={onClick}
+        >
+            <img className="slick-arrow-icon" src={leftArrow}/>
+        </div>
     );
 }
 
