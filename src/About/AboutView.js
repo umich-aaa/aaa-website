@@ -9,16 +9,55 @@ import { BrowserView, MobileView, isMobile } from "react-device-detect"
 import sampleImage from "../common/aaa-background.jpg"
 import takio05 from "../common/takio-05.jpg"
 import festifall2023 from "../common/festifall2023.jpg"
+import leftArrow from "../common/arrow-left.svg"
+import rightArrow from "../common/arrow-right.svg"
+
+function NextArrow(props){
+    const { style, onClick } = props
+    return(
+        <div
+              className="slick-arrow-next"
+      style={{ ...style, display: "flex" }}
+      onClick={onClick}>
+        <img className="slick-arrow-icon" src={rightArrow}/>
+      </div>
+    );
+}
+
+function PrevArrow(props){
+    const { style, onClick } = props
+    return(
+        <div
+              className="slick-arrow-prev"
+      style={{ ...style, display: "flex" }}
+      onClick={onClick}>
+        <img className="slick-arrow-icon" src={leftArrow}/>
+      </div>
+    );
+}
 
 export default function AboutView() {
     const carouselSettings = {
-        dots: true,
         infinite: true,
+        dots: true,
+        swipe: false,
+        draggable: false,
         speed: 500,
+        adaptiveHeight: true,
         slidesToShow: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 7000,
-        arrows: false,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+        responsive: [
+            {
+                breakpoint: 760,
+                settings: {
+                    swipe: true,
+                    draggable: true
+                }
+            }
+        ]
         // centerMode: true
     }
 
@@ -99,7 +138,7 @@ export default function AboutView() {
         <MobileView>
             <div id="about-mobile" className="view-section-container">
                 <div className="carousel-mobile-container">
-                <Slider {...carouselSettings} className="carousel-desktop">
+                <Slider {...carouselSettings} className="carousel-mobile">
                     <img src={takio05} alt="9 fursuiters gather at the University of Michigan Museum of Art"/>
                     <img src={festifall2023} alt="4 fursuiters hold up club banner behind a sign saying 'Jesus saves from hell'" />
                 </Slider>

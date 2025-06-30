@@ -5,6 +5,7 @@
 }
 .app {
     padding: 0;
+    width: 100%;
 }
 
 /* Section */
@@ -90,34 +91,69 @@
 .carousel-desktop img {
     max-height: 600px;
     object-fit: cover;
-    vertical-align: center;
+    vertical-align: middle;
 }
 .carousel-desktop-container {
-    /* max-height: 800px; */
-    overflow-y: hidden;
+    max-height: 800px;
+    /* overflow-y: hidden; */
 }
 .carousel-mobile-container {
     width: 102%;
     margin-left: -1%;
     margin-bottom: 12px;
 }
-.carousel-mobile {
-    /* border-style: none; */
-    /* border-style: solid; */
-    /* border-color: red; */
-}
-.slick-list {
-    vertical-align: middle;
-}
 .slick-track {
     margin-bottom: -24px;
 }
-.carousel img {
+.carousel-mobile img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-style: none;
+    vertical-align: middle;
 }
-.slick-arrow {
-    color: rgba(0, 0, 0, 0.5);
+
+/* .slick-list{
+    display: flex !important;
+    align-items: center;
+} */
+
+.slick-arrow-prev, .slick-arrow-next{
+    width: 50px;
+    height: 120px;
+    transform: translate(0, -50%);
+    top: 50%;
+    position: absolute;
+    border-radius: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.slick-arrow-prev:hover, .slick-arrow-next:hover{
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.slick-arrow-prev{
+    left: 20px;
+}
+
+.slick-arrow-next{
+    right: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    .slick-arrow-prev, .slick-arrow-next{
+        visibility: hidden;
+    }
+}
+
+/* Yes, I know this is some repeated code from our other icons,
+it's a one liner though and I don't want to mess with our other code */
+.slick-arrow-icon{
+    filter: invert(100%);
+    width: 30px;
+    z-index: 10;
 }
