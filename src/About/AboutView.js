@@ -45,7 +45,7 @@ export default function AboutView() {
         swipe: false,
         draggable: false,
         speed: 500,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         slidesToShow: 1,
         autoplay: false,
         autoplaySpeed: 7000,
