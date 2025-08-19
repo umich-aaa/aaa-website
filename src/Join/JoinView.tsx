@@ -23,7 +23,7 @@ export default function FurriesView(): JSX.Element {
                     <div className="view-content-block">
                         <h2>Who can join?</h2>
                         <p>
-                            <b><i>Anyone</i></b> affliated with the University of Michigan (students, alumni, faculty/staff) with interests in anthromorphic characters can join! No fursuit required, no need to be an artist or fursuit maker.
+                            <b><i>Anyone</i></b> affliated with the University of Michigan (students, alumni, faculty/staff) with interests in anthropomorphic characters can join! No fursuit required, no need to be an artist or fursuit maker.
                         </p>
                         <p>
                             If you are not a current student at the Ann Arbor campus, please <a href="#admin">contact the club admin</a> to join.

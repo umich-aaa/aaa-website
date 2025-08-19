@@ -80,7 +80,7 @@ export default function AboutView() {
                                 Anthro Art Association (AAA) is a registered voluntary student organization (VSO) at the University of Michigan - Ann Arbor.
                             </p>
                             <p>
-                                We are a member club of the Anthromorphic Animal Appreciation Association, a global federation of university furry clubs including clubs at UC Berkeley, UIUC, Georgia Tech, and more.
+                                We are a member club of the Anthropomorphic Animal Appreciation Association, a global federation of university furry clubs including clubs at UC Berkeley, UIUC, Georgia Tech, and more.
                             </p>
                         </div>
                         <div className="content-right">
@@ -114,7 +114,7 @@ export default function AboutView() {
                                 Anthro Art Association (AAA) is a registered voluntary student organization (VSO) at the University of Michigan - Ann Arbor.
                             </p>
                             <p>
-                                We are a member club of the Anthromorphic Animal Appreciation Association, a global federation of university furry clubs including clubs at UC Berkeley, UIUC, Georgia Tech, and more.
+                                We are a member club of the Anthropomorphic Animal Appreciation Association, a global federation of university furry clubs including clubs at UC Berkeley, UIUC, Georgia Tech, and more.
                             </p>
                         </div>
                         <div className="view-content-mobile">

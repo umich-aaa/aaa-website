@@ -27,7 +27,7 @@ export default function FurriesView(): JSX.Element {
                             Anthropomorphism is the attribution of human traits and behaviors to nonhuman objects, and anthropomorphic refers to having said traits and behaviors. Anthro animals can be found anywhere in media and video games, from Pink Panther to Bugs Bunny! 
                         </p>
                         <p>
-                            Anthromorphism has been alongside humans forever. It dates back to prehistoric times; the oldest known anthropomorphic statue, <a href="https://www.britishmuseum.org/blog/lion-man-ice-age-masterpiece" target="_blank">Löwenmensch ("lion man")</a> discovered in Germany, is known to be between 35,000 and 41,000 years old!
+                            Anthropomorphism has been alongside humans forever. It dates back to prehistoric times; the oldest known anthropomorphic statue, <a href="https://www.britishmuseum.org/blog/lion-man-ice-age-masterpiece" target="_blank">Löwenmensch ("lion man")</a> discovered in Germany, is known to be between 35,000 and 41,000 years old!
 
                         </p>
                     </div>

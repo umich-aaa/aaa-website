@@ -104,7 +104,7 @@ export default function LandingView(): JSX.Element {
                         Furries at UMich
                     </h1>
                     <p className="landing-main-description">
-                    We are the Anthro Art Association, a registered voluntary student organization  at the University of Michigan - Ann Arbor, providing a safe space for individuals interested in anthropomorphic characters and subculture.
+                    We are the Anthro Art Association, a registered voluntary student organization at the University of Michigan - Ann Arbor, providing a safe space for individuals interested in anthropomorphic characters and subculture.
                     </p>
                     <a className="landing-main-button" href="#about">
                         Learn More
