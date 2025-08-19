@@ -1,8 +1,8 @@
 import "./Join.css";
 import { BrowserView, MobileView, isMobile } from "react-device-detect"
-import backgroundImg from "../common/ac2024.jpg"
-import discordIcon from "../common/discord-icon.png"
-import twitterIcon from "../common/twitter-icon.svg"
+import backgroundImg from "../common/photos/ac2024.jpg"
+import discordIcon from "../common/icons/discord-icon.png"
+import twitterIcon from "../common/icons/twitter-icon.svg"
 import URLButton from "../common/URLButton"
 
 export default function FurriesView(): JSX.Element {

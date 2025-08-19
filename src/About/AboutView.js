@@ -6,11 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import clubLogo from "../common/club-logo.png"
 import { BrowserView, MobileView, isMobile } from "react-device-detect"
-import sampleImage from "../common/aaa-background.jpg"
-import takio05 from "../common/takio-05.jpg"
-import festifall2023 from "../common/festifall2023.jpg"
-import leftArrow from "../common/arrow-left.svg"
-import rightArrow from "../common/arrow-right.svg"
+import sampleImage from "../common/photos/aaa-background.jpg"
+import takio05 from "../common/photos/takio-05.jpg"
+import festifall2023 from "../common/photos/festifall2023.jpg"
+import leftArrow from "../common/icons/arrow-left.svg"
+import rightArrow from "../common/icons/arrow-right.svg"
 
 function NextArrow(props){
     const { style, onClick } = props

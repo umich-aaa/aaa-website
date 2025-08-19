@@ -1,12 +1,12 @@
 import "./Landing.css";
 import "../App.css"
 
-import backgroundImg from "../common/aaa-background.jpg"
-import twitterIcon from "../common/twitter-icon.svg"
-import instagramIcon from "../common/instagram-icon.svg"
-import discordIcon from "../common/discord-icon.png"
+import backgroundImg from "../common/photos/aaa-background.jpg"
+import twitterIcon from "../common/icons/twitter-icon.svg"
+import instagramIcon from "../common/icons/instagram-icon.svg"
+import discordIcon from "../common/icons/discord-icon.png"
 import clubLogo from "../common/club-logo.png"
-import calendarIcon from "../common/calendar-icon.svg"
+import calendarIcon from "../common/icons/calendar-icon.svg"
 import { gapi } from 'gapi-script'
 import date from 'date-and-time';
 
