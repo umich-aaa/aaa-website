@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.f72ef165.css",
-    "main.js": "/static/js/main.fbf75c19.js",
+    "main.css": "/static/css/main.8a044985.css",
+    "main.js": "/static/js/main.aee6e64b.js",
     "static/js/453.fb180af7.chunk.js": "/static/js/453.fb180af7.chunk.js",
     "static/media/SF-Pro.ttf": "/static/media/SF-Pro.2f9118d7e608bf94730c.ttf",
-    "static/media/festifall2023.jpg": "/static/media/festifall2023.44b0c78d5f8ff3830e5c.jpg",
-    "static/media/takio-05.jpg": "/static/media/takio-05.c7c84ab8ee451daf7f19.jpg",
-    "static/media/rix-pfp.png": "/static/media/rix-pfp.049047a83bc5d3a98d5c.png",
     "static/media/aaa-background.jpg": "/static/media/aaa-background.5ac615a6649bb8e16411.jpg",
-    "static/media/ac2024.jpg": "/static/media/ac2024.4585516eb4af97bf0d3b.jpg",
+    "static/media/festifall2023.jpg": "/static/media/festifall2023.06b1209a5cd8ea21bca7.jpg",
+    "static/media/takio-apple-07.jpg": "/static/media/takio-apple-07.66393c4980916e49b903.jpg",
+    "static/media/takio-05.jpg": "/static/media/takio-05.eb0db3288fa3350218da.jpg",
+    "static/media/takio-halloween-2.jpg": "/static/media/takio-halloween-2.514998cd291e756990bd.jpg",
+    "static/media/ac2024.jpg": "/static/media/ac2024.2c0932066bc311dcb572.jpg",
     "static/media/club-logo.png": "/static/media/club-logo.9476c621cd785fe2a033.png",
     "static/media/Pacifico-Regular.ttf": "/static/media/Pacifico-Regular.c0d735fc04154e03a691.ttf",
     "static/media/Courgette-Regular.ttf": "/static/media/Courgette-Regular.f99d9948a486f6270149.ttf",
     "static/media/kikojam-pfp.png": "/static/media/kikojam-pfp.9d6ead919de09a2beb8e.png",
+    "static/media/rix-pfp.png": "/static/media/rix-pfp.4d99f4462e03a52dbbd7.png",
     "static/media/mesoon-pfp.jpg": "/static/media/mesoon-pfp.4302be2f40547684a045.jpg",
     "static/media/mosfet-pfp.png": "/static/media/mosfet-pfp.d1a56463342a4432b7d6.png",
     "static/media/jowo-pfp.jpg": "/static/media/jowo-pfp.a8512c21d2347a95b572.jpg",
@@ -33,12 +35,12 @@
     "static/media/arrow-right.svg": "/static/media/arrow-right.0c0f648f9c128ae2f253a67676d15e65.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.3f11392267c7271dc868d55885ee41d1.svg",
     "static/media/email-icon.svg": "/static/media/email-icon.a7bdedcb801df4a655921d60480d444c.svg",
-    "main.f72ef165.css.map": "/static/css/main.f72ef165.css.map",
-    "main.fbf75c19.js.map": "/static/js/main.fbf75c19.js.map",
+    "main.8a044985.css.map": "/static/css/main.8a044985.css.map",
+    "main.aee6e64b.js.map": "/static/js/main.aee6e64b.js.map",
     "453.fb180af7.chunk.js.map": "/static/js/453.fb180af7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f72ef165.css",
-    "static/js/main.fbf75c19.js"
+    "static/css/main.8a044985.css",
+    "static/js/main.aee6e64b.js"
   ]
 }
