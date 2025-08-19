@@ -9,6 +9,8 @@ import { BrowserView, MobileView, isMobile } from "react-device-detect"
 import sampleImage from "../common/photos/aaa-background.jpg"
 import takio05 from "../common/photos/takio-05.jpg"
 import festifall2023 from "../common/photos/festifall2023.jpg"
+import takioApple07 from "../common/photos/takio-apple-07.jpg"
+import takioHalloween2 from "../common/photos/takio-halloween-2.jpg"
 import leftArrow from "../common/icons/arrow-left.svg"
 import rightArrow from "../common/icons/arrow-right.svg"
 
@@ -99,6 +101,8 @@ export default function AboutView() {
                     {/* Carousel */}
                     <div className="carousel-desktop-container">
                         <Slider {...carouselSettings} className="carousel-desktop">
+			    <img src={takioApple07} alt="8 fursuiters in an orchard" />
+			    <img src={takioHalloween2} alt="Fursuiter in a white tablecloth haunting two other fursuiters" />
                             <img src={takio05} alt="9 fursuiters gather at the University of Michigan Museum of Art"/>
                             <img src={festifall2023} alt="4 fursuiters hold up club banner behind a sign saying 'Jesus saves from hell'" />
                         </Slider>
@@ -141,6 +145,8 @@ export default function AboutView() {
             <div id="about-mobile" className="view-section-container">
                 <div className="carousel-mobile-container">
                 <Slider {...carouselSettings} className="carousel-mobile">
+                    <img src={takioApple07} alt="" />
+                    <img src={takioHalloween2} alt="" />
                     <img src={takio05} alt="9 fursuiters gather at the University of Michigan Museum of Art"/>
                     <img src={festifall2023} alt="4 fursuiters hold up club banner behind a sign saying 'Jesus saves from hell'" />
                 </Slider>
