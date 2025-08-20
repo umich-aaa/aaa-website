@@ -22,7 +22,7 @@ function NextArrow(props){
             style={{ ...style, display: "flex" }}
             onClick={onClick}
         >
-            <img className="slick-arrow-icon" src={rightArrow}/>
+            <img className="slick-arrow-icon" alt="next" src={rightArrow}/>
         </div>
     );
 }
@@ -35,7 +35,7 @@ function PrevArrow(props){
             style={{ ...style, display: "flex" }}
             onClick={onClick}
         >
-            <img className="slick-arrow-icon" src={leftArrow}/>
+            <img className="slick-arrow-icon" alt="previous" src={leftArrow}/>
         </div>
     );
 }
