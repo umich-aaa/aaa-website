@@ -14,14 +14,6 @@ export default function FAQsView(): JSX.Element {
                             <h3>General</h3>
                             <div className="faq-item-container">
                                 <p className="faq-question">
-                                    Q. Which name do I use, <i>Furries at UMich</i> or <i>Anthro Art Association</i>?
-                                </p>
-                                <p className="faq-answer">
-                                    A: “Anthro Art Association” (AAA) is the official name of the club as registered at the University of Michigan and should be used when referring to the club within the university. “Furries at UMich” may be used when referring to the club in an external context, such as social media.
-                                </p>
-                            </div>
-                            <div className="faq-item-container">
-                                <p className="faq-question">
                                     Q: I am an aspiring fursuit maker. What resources does the club have?
                                 </p>
                                 <p className="faq-answer">

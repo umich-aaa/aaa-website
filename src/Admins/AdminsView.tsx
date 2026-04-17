@@ -83,7 +83,7 @@ export default function AdminsView(): JSX.Element {
 
             <div className="view-content-container">
                 <h2 className="view-content-title-small">Club Admins</h2>
-                <p className="view-content-subtitle">for the 2025-26 school year</p>
+                <p className="view-content-subtitle">for the 2026-27 school year</p>
                 
                 <div className={isMobile ? "admins-view-content-mobile rounded-bg" : "admins-view-content-desktop rounded-bg"}>
                     <AdminItem name="Dewey" role="President" pfp={deweyProfileImg}

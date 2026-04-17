@@ -80,7 +80,7 @@ export default function LandingView(): JSX.Element {
                 <div id="top-buttons-container" className="top-icons">
                     <div className="left-icons">
                         <a href='/'>
-                            <img src={clubLogo} alt="AAA Logo" className="top-logo"/>
+                            <img src={clubLogo} alt="Furries at Umich Logo" className="top-logo"/>
                         </a>
                     </div>
                     <div className="right-icons">
@@ -109,7 +109,7 @@ export default function LandingView(): JSX.Element {
                         Furries at UMich
                     </h1>
                     <p className="landing-main-description">
-                    We are the Anthro Art Association, a registered voluntary student organization at the University of Michigan - Ann Arbor, providing a safe space for individuals interested in anthropomorphic characters and subculture.
+                    We are Furries at Umich, a registered voluntary student organization at the University of Michigan - Ann Arbor, providing a safe space for individuals interested in anthropomorphic characters and subculture.
                     </p>
                     <a className="landing-main-button" href="#about">
                         Learn More

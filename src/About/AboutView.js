@@ -69,7 +69,7 @@ export default function AboutView() {
         <>
         <div id="about" className="view-section-container">
             <div className="view-content-container">
-                <h1 className="view-content-title">About AAA</h1>
+                <h1 className="view-content-title">About Furries at Umich</h1>
                 <p className="view-content-subtitle">Learn more about the club!</p>
                 
                 {/* What do we do? */}
@@ -77,9 +77,9 @@ export default function AboutView() {
                     <div className="view-content-three-rows">
                         <img src={clubLogo} className="content-left" alt="Club Logo"/>
                         <div className="content-middle">
-                            <h2>What is AAA?</h2>
+                            <h2>What is Furries at Umich?</h2>
                             <p>
-                                Anthro Art Association (AAA) is a registered voluntary student organization (VSO) at the University of Michigan - Ann Arbor.
+                                Furries at Umich is a registered voluntary student organization (VSO) at the University of Michigan - Ann Arbor.
                             </p>
                             <p>
                                 We are a member club of the Anthropomorphic Animal Appreciation Association, a global federation of university furry clubs including clubs at UC Berkeley, UIUC, Georgia Tech, and more.
