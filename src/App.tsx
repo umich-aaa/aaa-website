@@ -8,6 +8,7 @@ import FurriesView from './Furries/FurriesView';
 import JoinView from './Join/JoinView';
 import AdminsView from './Admins/AdminsView';
 import FAQsView from './FAQs/FAQsView';
+import Footer from './Footer/FooterView';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <JoinView />
         <AdminsView />
         <FAQsView />
+        <Footer />
     </div>
   );
 }
