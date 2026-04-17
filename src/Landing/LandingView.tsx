@@ -1,10 +1,11 @@
 import "./Landing.css";
 import "../App.css"
 
-import backgroundImg from "../common/photos/aaa-background.jpg"
+import backgroundImg from "../common/photos/foolsMoon.jpg"
 import twitterIcon from "../common/icons/twitter-icon.svg"
 import instagramIcon from "../common/icons/instagram-icon.svg"
 import discordIcon from "../common/icons/discord-icon.png"
+import blueSkyIcon from "../common/icons/bluesky-icon.svg"
 import clubLogo from "../common/club-logo.png"
 import calendarIcon from "../common/icons/calendar-icon.svg"
 import { gapi } from 'gapi-script'
@@ -94,6 +95,10 @@ export default function LandingView(): JSX.Element {
                         <button className="icon-button-invert"
                                 onClick={() => openInNewTab("https://discord.gg/Jj7tH5zxzg")}>
                             <img src={discordIcon} alt="Discord"/>
+                        </button>
+                        <button className="icon-button-invert"
+                                onClick={() => openInNewTab("https://bsky.app/profile/furriesatumich.bsky.social")}>
+                            <img src={blueSkyIcon} alt="Bluesky"/>
                         </button>
                     </div>
                 </div>

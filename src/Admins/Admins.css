@@ -1,67 +1,148 @@
-
 #admin {
     background-color: white;
 }
-.admins-view-content-mobile, .admins-view-content-desktop {
+
+/* Rounded backgrounds for the containers */
+.admins-view-content-mobile, 
+.admins-view-content-desktop {
     width: 100%;
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
+    background-color: #eaf1f7;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .admin-item {
     display: inline-block;
     vertical-align: top;
+    /* Transition for Tiger Lily click effect */
+    transition: transform 0.1s ease;
 }
+
+.admin-item:active {
+    transform: scale(0.98); /* Slight squish when clicked */
+}
+
 .admins-view-content-mobile .admin-item {
     width: 100px;
     margin: 12px 12px;
-
 }
+
 .admins-view-content-desktop .admin-item {
-    /* border-style: solid; */
     width: 160px;
     margin: 16px calc(10% - 96px);
 }
+
 .admins-view-content-mobile .admin-pfp {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    /* border-style: solid;
-    border-color: lightgray; */
     margin-bottom: 4px;
     object-fit: cover;
 }
+
 .admins-view-content-desktop .admin-pfp {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    /* border-style: solid;
-    border-color: lightgray; */
     margin-bottom: 8px;
 }
-.admin-name-text {
-    
-}
+
 .admins-view-content-mobile .admin-name-text {
     font-size: 12pt;
     margin-bottom: 0px;
 }
+
 .admins-view-content-desktop .admin-name-text {
     margin-bottom: 2pt;
 }
+
 .admins-view-content-desktop .admin-role-text {
     margin-bottom: 10px;
 }
+
 .admins-view-content-mobile .admin-role-text {
     font-size: 10.5pt;
     margin-bottom: 8px;
 }
 
-
 .admin-social-icon {
     width: 20px;
     height: 20px;
     margin: 0px 8px;
+}
+
+/* snep :3 */
+
+.animation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* allows users to click through the animation */
+    z-index: 10000;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0); /* Transparent so you see the site behind it */
+}
+
+#animation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#snow-leopard, #blue-sheep {
+    position: absolute;
+    width: 400px; /* Adjusted size for overlay */
+    height: auto;
+    will-change: left, top; /* Performance optimization */
+}
+
+@keyframes moveSheep {
+    0% { 
+        left: -500px; 
+        top: 50%; 
+        transform: translateY(-50%); 
+    }
+    20% { top: 40%; }
+    40% { top: 60%; }
+    60% { top: 30%; }
+    80% { top: 50%; }
+    100% { 
+        left: 100vw; 
+        top: 50%; 
+        transform: translateY(-50%); 
+    }
+}
+
+@keyframes moveLeopard {
+    0% { 
+        left: -700px; 
+        top: 60%; 
+        transform: translateY(-50%); 
+    }
+    20% { top: 50%; }
+    40% { top: 70%; }
+    60% { top: 40%; }
+    80% { top: 60%; }
+    100% { 
+        left: 100vw; 
+        top: 60%; 
+        transform: translateY(-50%); 
+    }
+}
+
+/* --- Activation Classes --- */
+
+/* These trigger as soon as React mounts the elements into the overlay */
+#blue-sheep {
+    animation: moveSheep 3s ease-in-out forwards;
+}
+
+#snow-leopard {
+    animation: moveLeopard 4s ease-in-out forwards;
 }
