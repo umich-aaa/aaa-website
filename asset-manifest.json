@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.d1ea7e4f.css",
-    "main.js": "/static/js/main.3f90cd94.js",
+    "main.js": "/static/js/main.2a6571e2.js",
     "static/js/453.20029b61.chunk.js": "/static/js/453.20029b61.chunk.js",
+    "static/media/dehtwah.jpg": "/static/media/dehtwah.bb69e5e0dbcde9c83076.jpg",
     "static/media/SF-Pro.ttf": "/static/media/SF-Pro.2f9118d7e608bf94730c.ttf",
     "static/media/aaa-background.jpg": "/static/media/aaa-background.5ac615a6649bb8e16411.jpg",
     "static/media/foolsMoon.jpg": "/static/media/foolsMoon.0150f469ed5a281727ab.jpg",
     "static/media/festifall2023.jpg": "/static/media/festifall2023.06b1209a5cd8ea21bca7.jpg",
     "static/media/takio-halloween-2.jpg": "/static/media/takio-halloween-2.514998cd291e756990bd.jpg",
-    "static/media/apples2025.jpg": "/static/media/apples2025.e00be29ddbfc251fb4eb.jpg",
     "static/media/ac2024.jpg": "/static/media/ac2024.2c0932066bc311dcb572.jpg",
     "static/media/kayle-pfp.png": "/static/media/kayle-pfp.287577f9f21d05b594ce.png",
     "static/media/club-logo.png": "/static/media/club-logo.9476c621cd785fe2a033.png",
@@ -38,11 +38,11 @@
     "static/media/arrow-left.svg": "/static/media/arrow-left.3f11392267c7271dc868d55885ee41d1.svg",
     "static/media/email-icon.svg": "/static/media/email-icon.a7bdedcb801df4a655921d60480d444c.svg",
     "main.d1ea7e4f.css.map": "/static/css/main.d1ea7e4f.css.map",
-    "main.3f90cd94.js.map": "/static/js/main.3f90cd94.js.map",
+    "main.2a6571e2.js.map": "/static/js/main.2a6571e2.js.map",
     "453.20029b61.chunk.js.map": "/static/js/453.20029b61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d1ea7e4f.css",
-    "static/js/main.3f90cd94.js"
+    "static/js/main.2a6571e2.js"
   ]
 }
