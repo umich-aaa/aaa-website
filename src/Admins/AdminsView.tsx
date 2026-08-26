@@ -12,6 +12,7 @@ import jaykProfileImg from "../common/pfps/jayk-pfp.png"
 import deweyProfileImg from "../common/pfps/dewey-pfp.jpg"
 import snepImg from "../common/pfps/snep-jump-pfp.png"
 import sheepImg from "../common/pfps/sheep-pfp.png"
+import deerImg from "../common/pfps/deer.png"
 
 
 // Icons
@@ -28,7 +29,7 @@ import Spacer from "../common/Spacer"
 // --- Sub-component: AdminItem ---
 function AdminItem(props: {
     name: string, role: string, pfp: any, 
-    socialIcon1?: any, socialName1?: string, socialLink1?: string, 
+    socialIcon1?: any, socialName1?: string, socialLink1?: string,
     socialIcon2?: any, socialName2?: string, socialLink2?: string,
     onClick?: () => void, // New Prop
 }): JSX.Element {
@@ -57,26 +58,62 @@ function AdminItem(props: {
     )
 }
 
+interface AnimationStates {
+  isTigerAnimating: boolean;
+  isDeerAnimating: boolean;
+}
+
 // --- Main Component ---
 export default function AdminsView(): JSX.Element {
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [animationState, setAnimationState] = useState({
+        isTigerAnimating: false,
+        isDeerAnimating: false,
+    });
 
     const triggerTigerAnimation = () => {
-        if (isAnimating) return;
-        setIsAnimating(true);
+        if (animationState.isTigerAnimating) return;
+        setAnimationState({
+          ...animationState,
+          isTigerAnimating: true,
+        });
+
         // Reset state after animation finishes (4s + buffer)
-        setTimeout(() => setIsAnimating(false), 4500);
+        setTimeout(() => setAnimationState(prevState => ({
+          ...prevState,
+          isTigerAnimating: false,
+        })), 4500);
+    };
+
+    const triggerDeerAnimation = () => {
+        if (animationState.isDeerAnimating) return;
+        setAnimationState({
+          ...animationState,
+          isDeerAnimating: true,
+        });
+
+        setTimeout(() => setAnimationState(prevState => ({
+          ...prevState,
+          isDeerAnimating: false,
+        })), 3500);
     };
 
     return (
         <div id="admin" className="view-section-container">
             
             {/* The Animation Overlay */}
-            {isAnimating && (
+            {animationState.isTigerAnimating && (
                 <div className="animation-overlay">
                     <div id="animation-container">
                         <img id="snow-leopard" src={snepImg} alt="Snow Leopard" />
                         <img id="blue-sheep" src={sheepImg} alt="Himalayan Blue Sheep" />
+                    </div>
+                </div>
+            )}
+
+            {animationState.isDeerAnimating && (
+                <div className="animation-overlay">
+                    <div id="animation-container">
+                        <img id="deer" src={deerImg} alt="Deer" />
                     </div>
                 </div>
             )}
@@ -131,8 +168,15 @@ export default function AdminsView(): JSX.Element {
 
                     <AdminItem name="Mosfet" role="2025-26" pfp={mosfetProfileImg} />
 
-                    <AdminItem name="Dewey" role="2026-2027" pfp={deweyProfileImg}
-                        socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/deweydadeer" />
+                    <AdminItem
+                        name="Dewey"
+                        role="2026-2027"
+                        pfp={deweyProfileImg}
+                        socialIcon1={instagramIcon}
+                        socialName1="Instagram"
+                        socialLink1="https://www.instagram.com/deweydadeer"
+                        onClick={triggerDeerAnimation}
+                    />
 
                     <AdminItem 
                         name="Tiger Lily" 
