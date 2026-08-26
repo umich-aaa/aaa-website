@@ -9,7 +9,7 @@ import tigerLilyProfileImg from "../common/pfps/tiger-lily-pfp.png"
 import kayleProfileImg from "../common/pfps/kayle-pfp.png"
 import theoProfileImg from "../common/pfps/theo-pfp.jpg"
 import jaykProfileImg from "../common/pfps/jayk-pfp.png"
-import deweyProfileImg from "../common/pfps/dewey-pfp.jpg"
+import deweyProfileImg from "../common/pfps/dewey-pfp.png"
 import snepImg from "../common/pfps/snep-jump-pfp.png"
 import sheepImg from "../common/pfps/sheep-pfp.png"
 import deerImg from "../common/pfps/deer.png"
@@ -123,8 +123,15 @@ export default function AdminsView(): JSX.Element {
                 <p className="view-content-subtitle">for the 2026-27 school year</p>
                 
                 <div className={isMobile ? "admins-view-content-mobile rounded-bg" : "admins-view-content-desktop rounded-bg"}>
-                    <AdminItem name="Dewey" role="President" pfp={deweyProfileImg}
-                        socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/deweydadeer" />
+                    <AdminItem
+                        name="Dewey"
+                        role="President"
+                        pfp={deweyProfileImg}
+                        socialIcon1={instagramIcon}
+                        socialName1="Instagram"
+                        socialLink1="https://www.instagram.com/deweydadeer"
+                        onClick={triggerDeerAnimation}
+                    />
 
                     <AdminItem name="Theo" role="Vice President" pfp={theoProfileImg} 
                         socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/theoboops/" />

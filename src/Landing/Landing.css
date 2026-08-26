@@ -39,6 +39,7 @@
     height: 54px; width: 54px;
     border-style: none;
     margin: 0 6px;
+    clip-path: circle(50%);
 }
 .top-icons .icon-button,
 .top-icons .icon-button-invert {

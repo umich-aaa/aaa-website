@@ -6,7 +6,7 @@ import twitterIcon from "../common/icons/twitter-icon.svg"
 import instagramIcon from "../common/icons/instagram-icon.svg"
 import discordIcon from "../common/icons/discord-icon.png"
 import blueSkyIcon from "../common/icons/bluesky-icon.svg"
-import clubLogo from "../common/club-logo.png"
+import clubLogo from "../common/club-logo-margin-blue.png"
 import calendarIcon from "../common/icons/calendar-icon.svg"
 import { gapi } from 'gapi-script'
 import date from 'date-and-time';
