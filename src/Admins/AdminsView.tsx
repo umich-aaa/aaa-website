@@ -175,7 +175,13 @@ export default function AdminsView(): JSX.Element {
 
                     <AdminItem name="Jayk" role="Recruitment Chair" pfp={jaykProfileImg} />
 
-                    <AdminItem name="Kayle" role="Finance Chair" pfp={kayleProfileImg} />
+                    <AdminItem
+                        name="Kayle"
+                        role="Finance Chair"
+                        pfp={kayleProfileImg}
+                        socialIcon1={instagramIcon} socialName1="Instagram"
+                        socialLink1="https://www.instagram.com/kaylestuffs/"
+                    />
 
                     <AdminItem 
                         name="Tiger Lily" 
