@@ -13,6 +13,7 @@ import deweyProfileImg from "../common/pfps/dewey-pfp.png"
 import snepImg from "../common/pfps/snep-jump-pfp.png"
 import sheepImg from "../common/pfps/sheep-pfp.png"
 import deerImg from "../common/pfps/deer.png"
+import theoHugImg from "../common/pfps/theo-hug.png"
 
 
 // Icons
@@ -61,6 +62,8 @@ function AdminItem(props: {
 interface AnimationStates {
   isTigerAnimating: boolean;
   isDeerAnimating: boolean;
+  isDogAnimating: boolean;
+  timeAtDogAnimation: number;
 }
 
 // --- Main Component ---
@@ -68,6 +71,8 @@ export default function AdminsView(): JSX.Element {
     const [animationState, setAnimationState] = useState({
         isTigerAnimating: false,
         isDeerAnimating: false,
+        isDogAnimating: false,
+        timeAtDogAnimation: -1
     });
 
     const triggerTigerAnimation = () => {
@@ -97,6 +102,22 @@ export default function AdminsView(): JSX.Element {
         })), 3500);
     };
 
+    const triggerDogAnimation = () => {
+        if (animationState.isDogAnimating) return;
+        
+        setAnimationState({
+          ...animationState,
+          isDogAnimating: true,
+          timeAtDogAnimation: Date.now()
+        });
+
+        setTimeout(() => setAnimationState(prevState => ({
+          ...prevState,
+          isDogAnimating: false,
+          timeAtDogAnimation: -1
+        })), 600);
+    };
+
     return (
         <div id="admin" className="view-section-container">
             
@@ -118,6 +139,14 @@ export default function AdminsView(): JSX.Element {
                 </div>
             )}
 
+            {animationState.isDogAnimating && (
+                <div className="animation-overlay">
+                    <div id="animation-container">
+                        <img id="theo-hug" src={theoHugImg} alt="Theo hug sticker" />
+                    </div>
+                </div>
+            )}
+
             <div className="view-content-container">
                 <h2 className="view-content-title-small">Club Admins</h2>
                 <p className="view-content-subtitle">for the 2026-27 school year</p>
@@ -133,8 +162,16 @@ export default function AdminsView(): JSX.Element {
                         onClick={triggerDeerAnimation}
                     />
 
-                    <AdminItem name="Theo" role="Vice President" pfp={theoProfileImg} 
-                        socialIcon1={instagramIcon} socialName1="Instagram" socialLink1="https://www.instagram.com/theoboops/" />
+                    <AdminItem
+                        name="Theo"
+                        role="Vice President"
+                        pfp={theoProfileImg} 
+                        socialIcon1={instagramIcon} socialName1="Instagram"
+                        socialLink1="https://www.instagram.com/theoboops/"
+                        socialIcon2={globeIcon} socialName2="Website"
+                        socialLink2="https://links.theoboops.com"
+                        onClick={triggerDogAnimation}
+                    />
 
                     <AdminItem name="Jayk" role="Recruitment Chair" pfp={jaykProfileImg} />
 
