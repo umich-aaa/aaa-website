@@ -15,37 +15,17 @@ import { BrowserView, MobileView } from "react-device-detect"
 import { useEffect, useState } from "react";
 import moment from "moment";
 
-const sampleUpcomingEvents = [
-    { 
-        name: "Festifall 2024",
-        location: "TBD",
-        timeLine1: "2:30 PM - 5:00 PM",
-        timeLine2: "Wednesday, Aug 28, 2024"
-    },
-    { 
-        name: "Weekly Club meeting",
-        location: "Mason Hall 3427",
-        timeLine1: "4:00 PM - 6:00 PM",
-        timeLine2: "Sunday, Sep 1, 2024"
-    }
-]
-
-
 
 export default function LandingView(): JSX.Element {
-    let upcomingEvents = sampleUpcomingEvents; // TODO
-
     const openInNewTab = (url: string) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
     }
 
-    const calendarID = process.env.REACT_APP_CALENDAR_ID
-    const apiKey = process.env.REACT_APP_GOOGLE_API_KEY
-    const accessToken = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN
+    const calendarID = process.env.REACT_APP_CALENDAR_ID;
+    const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
     
-    const [events, setEvents] = useState<any[]>([])
-
+    const [events, setEvents] = useState<any[]>([]);
     const generateCalendar = (calendarID: string | undefined, apiKey: string | undefined): any => {
         function initiate() {
           gapi.client
@@ -59,7 +39,7 @@ export default function LandingView(): JSX.Element {
               })
               .then(
                   (response) => {
-                      let gotEvents = response.result.items
+                      let gotEvents = response.result.items;
                       setEvents(gotEvents);
                   },
                   function (err) {
@@ -69,9 +49,10 @@ export default function LandingView(): JSX.Element {
         }
         gapi.load('client', initiate);
     }
-    useEffect( () => {
+    useEffect(() => {
         generateCalendar(calendarID, apiKey)
     }, []);
+
     return (
 
         <div id="landing" className="view-section-container">
@@ -84,21 +65,25 @@ export default function LandingView(): JSX.Element {
                         </a>
                     </div>
                     <div className="right-icons">
-                        <button className="icon-button-invert"
+                        {/* <button className="icon-button-invert"
                                 onClick={() => openInNewTab("https://x.com/FurriesAtUMich")}>
                             <img src={twitterIcon} alt="Twitter"/>
-                        </button>
-                        <button className="icon-button-invert"
-                                onClick={() => openInNewTab("https://www.instagram.com/furriesatumich/")}>
-                            <img src={instagramIcon} alt="Instagram"/>
-                        </button>
+                        </button> */}
                         <button className="icon-button-invert"
                                 onClick={() => openInNewTab("https://discord.gg/Jj7tH5zxzg")}>
                             <img src={discordIcon} alt="Discord"/>
                         </button>
                         <button className="icon-button-invert"
+                                onClick={() => openInNewTab("https://www.instagram.com/furriesatumich/")}>
+                            <img src={instagramIcon} alt="Instagram"/>
+                        </button>
+                        {/* <button className="icon-button-invert"
                                 onClick={() => openInNewTab("https://bsky.app/profile/furriesatumich.bsky.social")}>
                             <img src={blueSkyIcon} alt="Bluesky"/>
+                        </button> */}
+                        <button className="icon-button-invert"
+                                onClick={() => openInNewTab("https://calendar.google.com/calendar/u/4?cid=YW50aHJvYXJ0YXNzb2NpYXRpb25AZ21haWwuY29t")}>
+                            <img src={calendarIcon} alt="Calendar"/>
                         </button>
                     </div>
                 </div>
@@ -142,24 +127,24 @@ export default function LandingView(): JSX.Element {
                         })}
                         <div className="upcoming-event-container-desktop">
                             <p className="upcoming-event-single-text">
-                                Join our Discord channel or Telegram group chat, or follow our Twitter (X) and Instagram for updates!
+                                Join our Discord channel for meeting info & a Telegram invite, follow our Instagram, or add our calendar!
                             </p>
-                            <img src={twitterIcon} className="upcoming-event-icon"
+                            {/* <img src={twitterIcon} className="upcoming-event-icon"
                                 alt="Twitter Icon"
-                                onClick={() => openInNewTab("https://x.com/FurriesAtUMich")}/>
-                            <img src={instagramIcon} className="upcoming-event-icon"
-                                alt="Instagram Icon"
-                                onClick={() => openInNewTab("https://www.instagram.com/furriesatumich/")}/>
+                                onClick={() => openInNewTab("https://x.com/FurriesAtUMich")}/> */}
                             <img src={discordIcon} className="upcoming-event-icon"
                                 alt="Discord Icon"
                                 onClick={() => openInNewTab("https://discord.gg/Jj7tH5zxzg")}/>
+                            <img src={instagramIcon} className="upcoming-event-icon"
+                                alt="Instagram Icon"
+                                onClick={() => openInNewTab("https://www.instagram.com/furriesatumich/")}/>
                             <img src={calendarIcon} className="upcoming-event-icon"
                                     alt="Calendar Icon"
-                                    onClick={() => openInNewTab("https://calendar.google.com/calendar/u/1?cid=Y185YjdlNTcxZmYwNzk0NzI2MjgzYzI4NTE5MzUzOWIwZDAzNWYzMGIwNmEyMTJiM2ZhYjlmZTNmMjQ3NzE5Zjc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20")}/>
+                                    onClick={() => openInNewTab("https://calendar.google.com/calendar/u/4?cid=YW50aHJvYXJ0YXNzb2NpYXRpb25AZ21haWwuY29t")}/>
                         </div>
                     </BrowserView>
                     <MobileView>
-                    { events.filter((e) => Date.parse(e.end.dateTime) > Date.now()).sort((a,b) => Date.parse(a.start.dateTime)-Date.parse(b.start.dateTime)).slice(0,1).map((event) => {
+                        { events.filter((e) => Date.parse(e.end.dateTime) > Date.now()).sort((a,b) => Date.parse(a.start.dateTime)-Date.parse(b.start.dateTime)).slice(0,1).map((event) => {
                             return (
                                 <div className="upcoming-event-container-desktop" key={event.sequence}>
                                     <h4 className="upcoming-event-name">
@@ -179,11 +164,9 @@ export default function LandingView(): JSX.Element {
                         })}
                         { events.length > 0 &&
                             <button className="upcoming-event-more-button-mobile"
-                                onClick={() => openInNewTab("https://calendar.google.com/calendar/u/1?cid=Y185YjdlNTcxZmYwNzk0NzI2MjgzYzI4NTE5MzUzOWIwZDAzNWYzMGIwNmEyMTJiM2ZhYjlmZTNmMjQ3NzE5Zjc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20")}>
-                                +
+                                onClick={() => openInNewTab("https://calendar.google.com/calendar/u/4?cid=YW50aHJvYXJ0YXNzb2NpYXRpb25AZ21haWwuY29t")}>
                             </button>
                         }
-
 
 
                         <div className="upcoming-event-container-mobile-small">
@@ -199,7 +182,6 @@ export default function LandingView(): JSX.Element {
                                 alt="Discord Icon"
                                 onClick={() => openInNewTab("https://discord.gg/Jj7tH5zxzg")}/>
                             </div>
-                            
                         </div>
                     </MobileView>
                 </div>
@@ -207,7 +189,7 @@ export default function LandingView(): JSX.Element {
 
             {/* Bakground */}
             <div className="color-overlay-blue"></div>
-            <img src={backgroundImg} id="landing-background-img" alt="7 fursuiters at Festifall 2023"/>
+            <img src={backgroundImg} id="landing-background-img" alt="Fursuiters at Fool Moon 2026"/>
         </div>
     );
         

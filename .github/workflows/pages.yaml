@@ -29,6 +29,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          REACT_APP_CALENDAR_ID: ${{ secrets.REACT_APP_CALENDAR_ID }}
+          REACT_APP_GOOGLE_API_KEY: ${{ secrets.REACT_APP_GOOGLE_API_KEY }}
         run: CI=false npm run build
 
       - name: Upload Pages artifact
