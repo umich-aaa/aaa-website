@@ -93,7 +93,7 @@ export default function FAQsView(): JSX.Element {
                                     Q: Do I need to join the Discord server or follow Furries at Umich social media?
                                 </p>
                                 <p className="faq-answer">
-                                    A: We highly encourage you to join our online community so that you can interact with other furries on campus, but you can still find and attend our meetings by checking our website periodically or subscribing to <a href="https://calendar.google.com/calendar/u/1?cid=Y185YjdlNTcxZmYwNzk0NzI2MjgzYzI4NTE5MzUzOWIwZDAzNWYzMGIwNmEyMTJiM2ZhYjlmZTNmMjQ3NzE5Zjc0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank">our calendar</a>. Please note that plans may change at the last minute, however.
+                                    A: We highly encourage you to join our online community so that you can interact with other furries on campus, but you can still find and attend our meetings by checking our website periodically or subscribing to <a href="https://calendar.google.com/calendar/u/4?cid=YW50aHJvYXJ0YXNzb2NpYXRpb25AZ21haWwuY29t" target="_blank">our calendar</a>. Please note that plans may change at the last minute, however.
                                 </p>
                             </div>
                             <div className="faq-item-container">
