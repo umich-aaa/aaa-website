@@ -61,7 +61,7 @@ export default function LandingView(): JSX.Element {
                 <div id="top-buttons-container" className="top-icons">
                     <div className="left-icons">
                         <a href='/'>
-                            <img src={clubLogo} alt="Furries at Umich Logo" className="top-logo"/>
+                            <img id="top-club-logo" src={clubLogo} alt="Furries at UMich Logo" className="top-logo"/>
                         </a>
                     </div>
                     <div className="right-icons">
