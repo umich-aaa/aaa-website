@@ -8,7 +8,6 @@ import mosfetProfileImg from "../common/pfps/mosfet-pfp.png"
 import tigerLilyProfileImg from "../common/pfps/tiger-lily-pfp.png"
 import kayleProfileImg from "../common/pfps/kayle-pfp.png"
 import theoProfileImg from "../common/pfps/theo-pfp.jpg"
-import jaykProfileImg from "../common/pfps/jayk-pfp.png"
 import deweyProfileImg from "../common/pfps/dewey-pfp.png"
 import snepImg from "../common/pfps/snep-jump-pfp.png"
 import sheepImg from "../common/pfps/sheep-pfp.png"
@@ -173,7 +172,7 @@ export default function AdminsView(): JSX.Element {
                         onClick={triggerDogAnimation}
                     />
 
-                    <AdminItem name="Jayk" role="Recruitment Chair" pfp={jaykProfileImg} />
+                    {/* <AdminItem name="Jayk" role="Recruitment Chair" pfp={jaykProfileImg} /> */}
 
                     <AdminItem
                         name="Kayle"
