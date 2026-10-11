@@ -28,24 +28,30 @@ export default function LandingView(): JSX.Element {
     const [events, setEvents] = useState<any[]>([]);
     const generateCalendar = (calendarID: string | undefined, apiKey: string | undefined): any => {
         function initiate() {
-          gapi.client
-              .init({
-                  apiKey: apiKey,
-              })
-              .then(function () {
-                  return gapi.client.request({
-                      path: `https://www.googleapis.com/calendar/v3/calendars/${calendarID}/events`,
-                  })
-              })
-              .then(
-                  (response) => {
-                      let gotEvents = response.result.items;
-                      setEvents(gotEvents);
-                  },
-                  function (err) {
-                      return [false, err]
-                  }
-              )
+            gapi.client
+            .init({
+                apiKey: apiKey,
+            })
+            .then(function () {
+                return gapi.client.request({
+                    path: `https://www.googleapis.com/calendar/v3/calendars/${calendarID}/events`,
+                    params: {
+                        singleEvents: true,
+                        timeMin: new Date().toISOString(),
+                        orderBy: "startTime",
+                        maxResults: 10,
+                    },
+                });
+            })
+            .then(
+                (response) => {
+                    let gotEvents = response.result.items;
+                    setEvents(gotEvents);
+                },
+                function (err) {
+                    return [false, err]
+                }
+            )
         }
         gapi.load('client', initiate);
     }

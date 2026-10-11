@@ -9,6 +9,7 @@ import tigerLilyProfileImg from "../common/pfps/tiger-lily-pfp.png"
 import kayleProfileImg from "../common/pfps/kayle-pfp.png"
 import theoProfileImg from "../common/pfps/theo-pfp.jpg"
 import deweyProfileImg from "../common/pfps/dewey-pfp.png"
+import lotharProfileImg from "../common/pfps/lothar-pfp.jpg"
 import snepImg from "../common/pfps/snep-jump-pfp.png"
 import sheepImg from "../common/pfps/sheep-pfp.png"
 import deerImg from "../common/pfps/deer.png"
@@ -190,6 +191,15 @@ export default function AdminsView(): JSX.Element {
                         socialName1="Instagram" 
                         socialLink1="https://www.instagram.com/tigerlilyuwu/"
                         onClick={triggerTigerAnimation} 
+                    /> 
+
+                    <AdminItem 
+                        name="Lothar" 
+                        role="Recruitment Chair" 
+                        pfp={lotharProfileImg}
+                        socialIcon1={instagramIcon} 
+                        socialName1="Instagram" 
+                        socialLink1="https://www.instagram.com/lotharandcrew/" 
                     /> 
                 </div>
 
